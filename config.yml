@@ -15,5 +15,5 @@ Wireless_network:
 
 Wireless_guest_network:
   ssid_name: Deco Home_Guest
-  ssid_password: XKNOdRA1Rp/kcZT/6JsD
+  ssid_password:
   ssid_encryption: WPA
