@@ -1,19 +1,1 @@
-General:
-  project_name: Test
-  first_name: TestName
-  last_name: TestLastName
-  location: Test/Waw
 
-Power_user:
-  power_user: poweruser
-  power_user_password:
-
-Wireless_network:
-  ssid_name: NameSSID
-  ssid_password:
-  ssid_encryption: WPA
-
-Wireless_guest_network:
-  ssid_name: Deco Home_Guest
-  ssid_password:
-  ssid_encryption: WPA
