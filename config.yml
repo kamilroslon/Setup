@@ -10,7 +10,7 @@ Power_user:
 
 Wireless_network:
   ssid_name: NameSSID
-  ssid_password:
+  ssid_password: asasa
   ssid_encryption: WPA
 
 Wireless_guest_network:
