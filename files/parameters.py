@@ -21,24 +21,26 @@ class PowerUser:
         return config_params
 
 class WifiMain:
-    def __init__(self, ssid_name, ssid_encryption, ssid_password=None):
+    def __init__(self, ssid_name, ssid_encryption, hidden, ssid_password=None):
         self.ssid_name = ssid_name
         self.ssid_encryption = ssid_encryption
         if ssid_password is None:
             ssid_password = generate_password()
+        self.hidden = hidden
         self.ssid_password = ssid_password
 
     def __str__(self):
-        config_params = f"Main SSID: {self.ssid_name}, Main SSID Encryption: {self.ssid_encryption}, Main Password: {self.ssid_password}"
+        config_params = f"Main SSID: {self.ssid_name}, Main SSID Encryption: {self.ssid_encryption}, Main Password: {self.ssid_password}, isHidden: {self.hidden}"
         return config_params
 
 class WifiGuest(WifiMain):
-    def __init__(self, ssid_name, ssid_encryption, ssid_password):
+    def __init__(self, ssid_name, ssid_encryption, hidden, ssid_password):
         super().__init__(ssid_name, ssid_encryption, ssid_password)
         if ssid_password is None:
             ssid_password = generate_password()
+        self.hidden = hidden
         self.ssid_password = ssid_password
 
     def __str__(self):
-        config_params = f"Guest SSID: {self.ssid_name}, Guest SSID Encryption: {self.ssid_encryption}, Guest Password: {self.ssid_password}"
+        config_params = f"Guest SSID: {self.ssid_name}, Guest SSID Encryption: {self.ssid_encryption}, Guest Password: {self.ssid_password}, isHidden: {self.hidden}"
         return config_params

@@ -10,10 +10,12 @@ Power_user:
 
 Wireless_network:
   ssid_name: NameSSID
-  ssid_password: asasa
+  ssid_password: Test1234
   ssid_encryption: WPA
+  hidden: False
 
 Wireless_guest_network:
   ssid_name: Deco Home_Guest
-  ssid_password:
+  ssid_password: Test1234
   ssid_encryption: WPA
+  hidden: False

@@ -19,7 +19,8 @@ def load_main_wifi(yaml_data):
     ssid_name = yaml_data['Wireless_network']['ssid_name']
     ssid_password = yaml_data['Wireless_network']['ssid_password']
     ssid_encryption = yaml_data['Wireless_network']['ssid_encryption']
-    main_ssid = WifiMain(ssid_name, ssid_encryption, ssid_password)
+    hidden = yaml_data['Wireless_network']['hidden']
+    main_ssid = WifiMain(ssid_name, ssid_encryption, hidden, ssid_password)
     return main_ssid
 
 
@@ -27,5 +28,6 @@ def load_guest_wifi(yaml_data):
     ssid_name = yaml_data['Wireless_guest_network']['ssid_name']
     ssid_password = yaml_data['Wireless_guest_network']['ssid_password']
     ssid_encryption = yaml_data['Wireless_guest_network']['ssid_encryption']
-    guest_ssid = WifiGuest(ssid_name, ssid_encryption, ssid_password)
+    hidden = yaml_data['Wireless_guest_network']['hidden']
+    guest_ssid = WifiGuest(ssid_name, ssid_encryption, hidden, ssid_password)
     return guest_ssid
